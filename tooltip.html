@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            /* margin: 10px; */
+            border-radius: 3px;
+            top: 0px; /* Adjust as needed */
+            left: 0;
+           
+        }
+    </style>
+</head>
+<body>
+   <div style="display: flex; flex-direction: row;"> <h1 id="hovertext" >Hover over me 
+        
+    </h1>
+    <div id='tooltiptext'>This is a tooltip</div></div>
+    <script>
+        var text = document.getElementById('hovertext');
+        var tooltip1 = document.getElementById('tooltiptext');
+
+        text.addEventListener('mouseover', function() {
+            tooltip1.style.visibility='visible';
+        });
+
+        text.addEventListener('mouseout', function() {
+            tooltip1.style.visibility = 'hidden';
+        });
+    </script>
+</body>
+</html>
