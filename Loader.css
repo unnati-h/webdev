@@ -1,0 +1,26 @@
+.loader{
+    width: 100px;
+    height: 10px;
+    color: black;
+    background-color: black;
+    animation: Rot 0.875s infinite;
+}
+@keyframes Rot {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vh;
+}
+button{
+    background-color: black;
+    color: bisque;
+}
