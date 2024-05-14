@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="changebttn" onclick="divhandle()">make div dissapear</button>
+    <div style="width: 100px;height: 100px;background-color: palevioletred;visibility: visible; margin: 10px;" id="back"></div>
+    <script>
+        var divv=document.getElementById('back');
+        var bttn=document.getElementById('changebttn');
+        function divhandle()
+        {
+            divv.style.visibility=divv.style.visibility=='visible'?'hidden':'visible';
+            bttn.innerHTML= divv.style.visibility=='visible'?'make div dissapear':'make div appear';
+        }
+    </script>
+</body>
+</html>
