@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question button {
+            position: absolute;
+            right: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question" id="Q1">
+            <h1>What is HTML</h1>
+            <button id="b1">+</button>
+            <div class="answer" id="A1">HTML is Hyper Text Markup Language.</div>
+        </div>
+        <div class="question" id="Q2">
+            <h1>What is CSS</h1>
+            <button id="b2">+</button>
+            <div class="answer" id="A2">CSS is Cascading Style Sheets.</div>
+        </div>
+    </div>
+    <script>
+        var b1 = document.getElementById('b1');
+        var ans1 = document.getElementById('A1');
+        var b2 = document.getElementById('b2');
+        var ans2 = document.getElementById('A2');
+
+        b1.addEventListener('click', () => {
+            if (ans1.style.display === 'none' || ans1.style.display === '') {
+                ans1.style.display = 'block';
+                b1.innerHTML = '-';
+            } else {
+                ans1.style.display = 'none';
+                b1.innerHTML = '+';
+            }
+        });
+
+        b2.addEventListener('click', () => {
+            if (ans2.style.display === 'none' || ans2.style.display === '') {
+                ans2.style.display = 'block';
+                b2.innerHTML = '-';
+            } else {
+                ans2.style.display = 'none';
+                b2.innerHTML = '+';
+            }
+        });
+    </script>
+</body>
+</html>
