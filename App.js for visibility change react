@@ -1,0 +1,16 @@
+//App.js for visibility change on hover
+function App()
+const [isHover, setHover] = useState(false); 
+const hoverHandle = () => { 
+ setHover(!isHover); 
+};
+
+  return (
+     <div className="App">
+       <button onMouseOver={hoverHandle} onMouseLeave={hoverHandle} style={{backgroundColor:'green',color:'white'}}>hover over me</button>
+      <div style={isHover?{display:'none'}:{backgroundColor:'pink', width:'100px',height:'200px'}}>
+      color changing div
+      </div>
+   </div>
+);
+ export default App
